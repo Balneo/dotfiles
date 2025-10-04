@@ -28,7 +28,7 @@ command=free -h | awk '/^Mem/ { print $3 "/" $2 }'
 interval=10
 
 [battery]
-command=acpi -b | awk -F ', ' '{print $2 " " $3}'
+command=~/.config/i3blocks/nbattery.sh
 interval=30
 
 # [network]
