@@ -7,7 +7,7 @@ return {
     config = function()
       require("nightfox").setup({
         options = {
-          transparent = false,
+          transparent = true,
           styles = {
             comments = "italic",
             keywords = "bold",
@@ -29,7 +29,7 @@ return {
     config = function()
       require("tokyonight").setup({
         style = "night",
-        transparent = false,
+        transparent = true,
         terminal_colors = true,
       })
       -- you could also make this the default instead by moving the line here

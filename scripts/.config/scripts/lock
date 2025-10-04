@@ -1,11 +1,16 @@
 #!/bin/sh
-
+# color codes; 
+# https://hookagency.com/blog/website-color-schemes-2020/
 BLANK='#00000000'
 CLEAR='#ffffff22'
-DEFAULT='#00897bE6'
-TEXT='#00897bE6'
-WRONG='#880000bb'
-VERIFYING='#00564dE6'
+# DEFAULT='#00897bE6'
+DEFAULT='#0049B7E6'
+# TEXT='#00897bE6'
+TEXT='#0049B7E6'
+WRONG='#ff1d58bb'
+KEYSTROKE='#00DDFFE6'
+# VERIFYING='#00564dE6'
+VERIFYING='#0049B7E6'
 
 i3lock \
 --insidever-color=$CLEAR     \
@@ -20,11 +25,11 @@ i3lock \
 --separator-color=$DEFAULT   \
 \
 --verif-color=$TEXT          \
---wrong-color=$TEXT          \
+--wrong-color=$WRONG         \
 --time-color=$TEXT           \
 --date-color=$TEXT           \
 --layout-color=$TEXT         \
---keyhl-color=$WRONG         \
+--keyhl-color=$KEYSTROKE     \
 --bshl-color=$WRONG          \
 \
 --screen 1                   \
@@ -33,4 +38,4 @@ i3lock \
 --indicator                  \
 --time-str="%H:%M:%S"        \
 --date-str="%A, %Y-%m-%d"       \
---keylayout 1                \
+# --keylayout 1                \
