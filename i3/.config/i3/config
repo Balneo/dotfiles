@@ -198,19 +198,19 @@ bindsym $mod+r mode "resize"
 bar {
     i3bar_command i3bar --transparency
     status_command i3blocks
-    position top
+    position bottom
     font pango:FiraCode Nerd Font 10
     colors {
-        background #000000
+        background #00000099
         # background #1e1e2e
         statusline #f5f5f5
         # separator  #44475a
         separator  #666666
 
-        focused_workspace  #bd93f9 #44475a #ffffff
-        active_workspace   #6272a4 #44475a #ffffff
-        inactive_workspace #1e1e2e #1e1e2e #888888
-        urgent_workspace   #ff5555 #1e1e2e #ffffff
+        focused_workspace  #bd93f9 #44475a99 #ffffff
+        active_workspace   #6272a4 #44475a99 #ffffff
+        inactive_workspace #1e1e2e #1e1e2e99 #888888
+        urgent_workspace   #ff5555 #1e1e2e99 #ffffff
     }
 }
 
