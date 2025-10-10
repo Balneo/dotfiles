@@ -1,0 +1,10 @@
+ configuration {
+   modes: [ combi ];
+   combi-modes: [ window, drun, run ];
+ }
+
+// @theme "gruvbox-dark"
+
+ /* Insert theme modifications after this */
+
+@theme "/usr/share/rofi/themes/Monokai.rasi"
