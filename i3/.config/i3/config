@@ -37,8 +37,13 @@ exec --no-startup-id nm-applet
 # Start picom for transparent and fluid motions in i3.
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b  
 
+# start notification service dunst could also be configed
+# and started with the config in .config/dunst/dunstrc
+exec --no-startup-id dunst
+
 # set background
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/Anime\ Wallpaper_\ Serene\ Purple\ Field\ House\ 4K.jpg
+# exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/Anime\ Wallpaper_\ Serene\ Purple\ Field\ House\ 4K.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/IronGiantRetroCyberPunk.png
 
 # Autotiling
 exec_always --no-startup-id i3-auto-layout
