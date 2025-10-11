@@ -13,7 +13,7 @@ perc=$(echo "$battery_info" | awk -F ', ' '{print $2}' | tr -d '%')
 
 # Determine icon
 icon=""
-if [[ "$status" == *"Charging" ]]; then
+if [[ "$status" != *"Discharging" ]]; then
     icon="\uF0E7"   # ⚡ Charging
 elif  [ $perc -ge 80 ]; then
     icon="\uF240"  # 
