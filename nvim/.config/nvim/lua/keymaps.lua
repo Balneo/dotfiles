@@ -4,4 +4,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Increment number
+vim.keymap.set("n", "g+", "<C-a>", { desc = "Increment number" })
 
+-- Decrement number
+vim.keymap.set("n", "g-", "<C-x>", { desc = "Decrement number" })
