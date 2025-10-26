@@ -24,7 +24,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
 # PS1='\W \$ '
-PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\]\W \[\033[01;37m\]\$ \[\033[00m\]'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\]\u@\h \W \[\033[01;37m\]\$ \[\033[00m\]'
 
 alias ll='ls -la --color=auto'
 alias vim='nvim'
