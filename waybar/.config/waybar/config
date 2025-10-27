@@ -8,7 +8,8 @@
   "hyprland/workspaces",
   "custom/uptime",
   "memory",
-  "cpu"
+  "cpu",
+  "custom/gpu-usage"
   ],
 
   "modules-center": ["clock"],
@@ -76,7 +77,15 @@
     "interval": 1,
     "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "on-click": "ghostty -e htop"
+    "on-click": "kitty -e htop"
+  },
+
+  "custom/gpu-usage": {
+    "format": "{} {icon}",
+    "exec": "gpu-usage-waybar",
+    "return-type": "json",
+    "format-icons": "󰾲",
+    "on-click": "kitty -e nvtop",
   },
 
   "memory": {
