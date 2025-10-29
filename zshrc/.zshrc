@@ -52,3 +52,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'  # subtle grey
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # bindkey '^I' autosuggest-accept
+#
+#
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5A' up-line-or-history
+bindkey '^[[1;5B' down-line-or-history
