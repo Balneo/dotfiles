@@ -25,6 +25,7 @@
   ],
 
   "hyprland/workspaces": {
+    "_comment": "#TODO: Only show active workspace for active monitor",
     "format": "{name}: {icon}",
     "format-icons": {
       "active": "",
