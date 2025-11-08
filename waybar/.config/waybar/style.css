@@ -151,6 +151,7 @@
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
 #bluetooth,
+#custom-light,
 #pulseaudio,
 #backlight,
 #network,
@@ -167,6 +168,7 @@
 }
 
 #bluetooth:hover,
+#custom-light:hover,
 #pulseaudio:hover,
 #backlight:hover,
 #network:hover,
@@ -174,6 +176,7 @@
 #battery:hover {
   background-color: rgb(41, 42, 53);
 }
+
 
 #bluetooth {
   margin-left: 0px; 
@@ -209,6 +212,10 @@
 #clock {
   color: #99d1db;
   font-weight: 500;
+}
+
+#custom-light {
+  color: #c6d0f5;
 }
 
 #pulseaudio {

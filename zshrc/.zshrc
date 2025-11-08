@@ -26,8 +26,15 @@ alias inv='nvim $(fzf --preview="bat --color=always {}")'
 # ---- Prompt (temporary; will be replaced by Starship) ----
 PROMPT='%F{green}%n@%m%f %F{blue}%~%f %# '
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 eval "$(starship init zsh)"
 source <(fzf --zsh)
+
+# Load RUST
+. "$HOME/.cargo/env"
+. "$HOME/export-esp.sh"
 
 # Load built-in completion system
 

@@ -4,20 +4,22 @@
   "margin-top": -7,
   "margin-bottom": -2,
   "spacing" : 0,
+
   "modules-left": [
-  "hyprland/workspaces",
-  "custom/uptime",
-  "memory",
-  "cpu",
-  "custom/gpu-usage"
+    "hyprland/workspaces",
+    "_custom/uptime",
+    "memory",
+    "cpu",
+    "custom/gpu-usage"
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
     "custom/music",
-    // "custom/pomodoro",
+    "_custom/pomodoro",
     "bluetooth",
+    "custom/light",
     "network",
     "pulseaudio", 
     "backlight",
@@ -71,8 +73,7 @@
     "interval": 5,
     "tooltip-format": "{essid} ({signalStrength}%)",
     "on-click": "nm-connection-editor"
-
- },
+  },
 
   "cpu": {
     "interval": 1,
@@ -93,6 +94,15 @@
     "interval": 30,
     "format": "   {used:0.1f}G / {total:0.1f}G",
     "tooltip-format": "Memory"
+  },
+
+  "custom/light": {
+    "_exec": "~/.config/waybar/scripts/light_status.sh",
+    "on-click": "~/.config/waybar/scripts/light_toggle.sh",
+    "format": "󰥟",
+    "interval": 10,
+    "signal": 10,
+    "tooltip": false
   },
 
   "custom/uptime": {
