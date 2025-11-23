@@ -21,6 +21,9 @@ alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias vim='nvim'
+alias 'su-rpi-imager'='-E DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY rpi-imager'
+
+
 # alias nf='fzf --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias inv='nvim $(fzf --preview="bat --color=always {}")' 
 # ---- Prompt (temporary; will be replaced by Starship) ----
@@ -38,10 +41,9 @@ source <(fzf --zsh)
 
 # Load built-in completion system
 
-zstyle ':autocomplete:*' auto-expand 'false'
-zstyle ':autocomplete:*' inline-menu 'false'
+# zstyle ':autocomplete:*' auto-expand 'false'
+# zstyle ':autocomplete:*' inline-menu 'false'
  
-autoload -Uz compinit
 compinit
 compaudit
 
@@ -54,13 +56,13 @@ source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-ZSH_AUTOSUGGEST_DELAY=0.3 # delay in seconds (0.3 = 300ms)
+# ZSH_AUTOSUGGEST_DELAY=0.3 # delay in seconds (0.3 = 300ms)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'  # subtle grey
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# bindkey '^I' autosuggest-accept
-#
-#
+bindkey '^I' autosuggest-accept
+
+
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5A' up-line-or-history
