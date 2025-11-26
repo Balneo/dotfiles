@@ -43,9 +43,6 @@ source <(fzf --zsh)
 
 # zstyle ':autocomplete:*' auto-expand 'false'
 # zstyle ':autocomplete:*' inline-menu 'false'
- 
-compinit
-compaudit
 
 # Load zsh plugins
 # zsh-autocomplete should come early, after compinit

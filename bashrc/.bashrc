@@ -26,7 +26,15 @@ alias grep='grep --color=auto'
 # PS1='\W \$ '
 PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\]\u@\h \W \[\033[01;37m\]\$ \[\033[00m\]'
 
-alias ll='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -lAh'
 alias vim='nvim'
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 export SUDO_EDITOR="nvim"
+
+eval "$(starship init bash)"
+source <(fzf --bash)
+
+
