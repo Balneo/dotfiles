@@ -1,0 +1,7 @@
+# Use spaces for indentation
+indent_type = "Spaces"
+
+# Maximum number of spaces per indentation level
+indent_width = 4
+# Optional: maximum line width (for line wrapping)
+column_width = 120
