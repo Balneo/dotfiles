@@ -38,3 +38,4 @@ eval "$(starship init bash)"
 source <(fzf --bash)
 
 
+export PATH=$HOME/.local/bin:$PATH
