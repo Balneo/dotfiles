@@ -5,8 +5,9 @@ require('keymaps')
 -- load options like row number and stuff
 require('options')
 -- Lets go with lazy.nvim
-require('config.lazy')
-require('config.lspconfig')
+require("lazy-bootstrap")
+require("lazy-plugins")
+-- require('config.lspconfig')
 require('config.autocmd')
 -- load moves (like o and O)
 require('moves')

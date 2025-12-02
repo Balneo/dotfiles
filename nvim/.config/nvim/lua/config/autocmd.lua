@@ -13,3 +13,18 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        vim.cmd([[
+		highlight! link Pmenu Normal
+		highlight! link PmenuSel Visual
+		highlight! link PmenuThumb Normal
+		highlight! link NormalFloat Normal
+		highlight! link FloatBorder Normal
+		highlight! link CmpItemKindFunction Function
+		highlight! link CmpItemKindVariable Identifier
+		highlight! link CmpItemKindKeyword Keyword
+		]])
+    end,
+})
