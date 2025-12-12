@@ -7,8 +7,9 @@ require('options')
 -- Lets go with lazy.nvim
 require("lazy-bootstrap")
 require("lazy-plugins")
-require('config.lspconfig')
-require('config.autocmd')
+require('configs.lspconfig')
+require('configs.autocmd')
+-- require('configs.devicons')
 -- load moves (like o and O)
 require('moves')
 
