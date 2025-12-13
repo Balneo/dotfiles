@@ -6,6 +6,7 @@ require("mason-tool-installer").setup({
         "bashls",
         "cssls",
         "css_variables",
+        "clangd",
         "dockerls",
         "docker_compose_language_service",
         "cssmodules_ls",
@@ -29,6 +30,7 @@ local servers = {
     "bashls",
     "basedpyright",
     "html",
+    "clangd",
     "cssls",
     "css_variables",
     "dockerls",
@@ -41,12 +43,24 @@ local servers = {
     "emmet_language_server",
     "ts_ls",
 }
+
 vim.lsp.config("marksman", {
     filetypes = { "md", "markdown", "mdx", "markdown.mdx" },
 })
 
 vim.lsp.config("html", {
     filetypes = { "typescriptreact", "javascriptreact", "html", "htmlangular" },
+})
+
+vim.lsp.config("clangd", {
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=never",
+    },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
 })
 
 for _, lsp in ipairs(servers) do

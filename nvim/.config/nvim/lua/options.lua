@@ -1,38 +1,61 @@
--- ~/.config/nvim/lua/options.lua
-local o = vim.opt
-local a = vim.api
--- line numbers
-o.number = true
-o.relativenumber = true
+local opt = vim.opt
+vim.o.number = true
+vim.o.relativenumber = true
 
--- appearance
-o.wrap = false
-o.showmode = false   -- we usually don't need --INSERT--
-o.cursorline = true
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.o.mouse = "a"
+vim.o.tabstop = 4 -- Number of spaces that a <Tab> counts for
+vim.o.shiftwidth = 4 -- Number of spaces to use for auto-indent
+vim.o.expandtab = true
+vim.o.winborder = "rounded"
+opt.hlsearch = true
+opt.incsearch = true
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.smartindent = true
+opt.termguicolors = true
+opt.swapfile = false
+vim.schedule(function()
+    vim.o.clipboard = "unnamedplus"
+end)
 
--- tabs & indentation
-o.expandtab = true
-o.shiftwidth = 4
-o.tabstop = 4
-o.smartindent = true
+vim.o.breakindent = true
 
--- searching
-o.ignorecase = true
-o.smartcase = true
-o.incsearch = true
+-- Save undo history
+vim.o.undofile = true
 
--- other quality of life
-o.clipboard = 'unnamedplus'  -- use system clipboard
-o.mouse = 'a'
-o.signcolumn = 'yes'
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
--- Jump to last known cursor position when opening a file
-a.nvim_create_autocmd("BufReadPost", {
-  callback = function()
-    local mark = a.nvim_buf_get_mark(0, '"')
-    local lcount = a.nvim_buf_line_count(0)
-    if mark[1] > 0 and mark[1] <= lcount then
-      pcall(a.nvim_win_set_cursor, 0, mark)
-    end
-  end,
-})
+-- Keep signcolumn on by default
+vim.o.signcolumn = "yes"
+
+-- Decrease update time
+vim.o.updatetime = 250
+
+-- Decrease mapped sequence wait time
+vim.o.timeoutlen = 300
+
+-- Configure how new splits should be opened
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+vim.o.list = true
+vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
+
+-- Preview substitutions live, as you type!
+vim.o.inccommand = "split"
+
+-- Show which line your cursor is on
+vim.o.cursorline = true
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 20
+vim.o.confirm = true
+vim.o.tabline = ""
+vim.o.showtabline = 0
+
+-- vim: ts=2 sts=2 sw=2 et

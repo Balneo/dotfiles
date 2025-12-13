@@ -10,6 +10,10 @@ return {
             additional_vim_regex_highlighting = false,
         },
         ensure_installed = {
+            "c",
+            "cpp",
+            "cmake",
+            "ini",
             "vim",
             "lua",
             "vimdoc",
