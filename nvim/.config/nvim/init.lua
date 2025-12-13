@@ -1,19 +1,19 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.g.have_nerd_font = true
 
--- load keymaps first
-require('keymaps')
--- load options like row number and stuff
-require('options')
--- Lets go with lazy.nvim
+require("options")
 require("lazy-bootstrap")
 require("lazy-plugins")
-require('configs.lspconfig')
-require('configs.autocmd')
--- require('configs.devicons')
--- load moves (like o and O)
-require('moves')
+require("mappings")
+require("configs.lspconfig")
+require("configs.colorscheme")
 
-
+vim.filetype.add({
+    extension = {
+        ["http"] = "http",
+    },
+})
 
 vim.treesitter.language.register("html", "typescriptreact")
 vim.treesitter.language.register('tsx', 'typescriptreact')
