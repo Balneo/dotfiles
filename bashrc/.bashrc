@@ -30,7 +30,7 @@ alias ll='ls -l --color=auto'
 alias la='ls -lAh'
 alias vim='nvim'
 
-export VISUAL=nvim
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="nvim"
 
