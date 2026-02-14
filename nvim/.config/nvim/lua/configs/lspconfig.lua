@@ -22,6 +22,7 @@ require("mason-tool-installer").setup({
         "stylua",
         "marksman",
         "markdownlint",
+        "yaml-language-server",
     },
 })
 
@@ -63,6 +64,27 @@ vim.lsp.config("clangd", {
     filetypes = { "c", "cpp", "objc", "objcpp" },
 })
 
+vim.lsp.config("yamlls", {
+    filetypes = { "yaml", "yml" },
+    settings = {
+        yaml = {
+            schemas = {
+                -- GitHub Actions
+                -- ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+                -- Kubernetes
+                -- ["https://json.schemastore.org/kubernetes.json"] = "k8s/*.yaml",
+                -- Docker Compose
+                ["https://json.schemastore.org/docker-compose.json"] = "docker-compose*.yml",
+                -- Azure DevOps Pipelines
+                ["https://json.schemastore.org/azure-pipelines.json"] = "*pipeline*.yml",
+            },
+            validate = true,
+            hover = true,
+            completion = true,
+            format = { enable = true },
+        },
+    },
+})
 for _, lsp in ipairs(servers) do
     vim.lsp.enable(lsp)
 end
