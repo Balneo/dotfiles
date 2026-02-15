@@ -74,7 +74,7 @@ vim.lsp.config("yamlls", {
                 -- Kubernetes
                 -- ["https://json.schemastore.org/kubernetes.json"] = "k8s/*.yaml",
                 -- Docker Compose
-                ["https://json.schemastore.org/docker-compose.json"] = "docker-compose*.yml",
+                ["https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"] = "docker-compose*.yml",
                 -- Azure DevOps Pipelines
                 ["https://json.schemastore.org/azure-pipelines.json"] = "*pipeline*.yml",
             },
@@ -85,6 +85,7 @@ vim.lsp.config("yamlls", {
         },
     },
 })
+
 for _, lsp in ipairs(servers) do
     vim.lsp.enable(lsp)
 end

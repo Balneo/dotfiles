@@ -8,6 +8,7 @@ require("lazy-plugins")
 require("mappings")
 require("configs.lspconfig")
 require("configs.colorscheme")
+require("configs.terminal")
 
 vim.filetype.add({
     extension = {
