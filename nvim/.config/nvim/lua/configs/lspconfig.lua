@@ -74,9 +74,20 @@ vim.lsp.config("yamlls", {
                 -- Kubernetes
                 -- ["https://json.schemastore.org/kubernetes.json"] = "k8s/*.yaml",
                 -- Docker Compose
-                ["https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"] = "docker-compose*.yml",
-                -- Azure DevOps Pipelines
-                ["https://json.schemastore.org/azure-pipelines.json"] = "*pipeline*.yml",
+                ["https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"] = {
+                    "docker-compose.yml",
+                    "docker-compose.yaml",
+                    "**/docker-compose*.yml",
+                    "**/docker-compose*.yaml",
+                    "compose.yml",
+                    "compose.yaml",
+                },
+                ["https://json.schemastore.org/azure-pipelines.json"] = {
+                    "azure-pipelines.yml",
+                    "azure-pipelines.yaml",
+                    "*pipeline*.yml",
+                    "*pipeline*.yaml",
+                },
             },
             validate = true,
             hover = true,
