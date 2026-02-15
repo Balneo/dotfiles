@@ -37,3 +37,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		]])
     end,
 })
+
+vim.api.nvim_create_autocmd("DirChanged", {
+  callback = function()
+    pcall(vim.cmd, "OverseerLoadBundle")
+  end,
+})
