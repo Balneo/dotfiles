@@ -88,7 +88,7 @@ return {
                 follow_current_file = true,
                 filtered_items = {
                     hide_dotfiles = false,
-                    hide_by_name = { "node_modules" },
+                    hide_by_name = { "node_modules", "__pycache__" },
                 },
             },
         },
