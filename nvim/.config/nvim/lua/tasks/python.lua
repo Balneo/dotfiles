@@ -23,7 +23,7 @@ overseer.register_template({
 overseer.register_template({
   name = "Python: Ruff Fix + Lint",
   condition = {
-    callback = is_python_project,
+    filetype = { "python" },
   },
   builder = function()
     local root = get_root()
@@ -46,7 +46,7 @@ overseer.register_template({
     name = "Run release.py",
     desc = "Run release.py with input/output/work dirs",
     condition = {
-        callback = is_python_project,
+        filetype = { "python" },
     },
     params = {
         input = {

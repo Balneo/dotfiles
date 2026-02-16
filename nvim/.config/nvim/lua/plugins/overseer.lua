@@ -24,6 +24,7 @@ return {
         -- Now register custom templates
         -- require("tasks.java")
         require("tasks.python")
+        require("tasks.esphome")
         -- require("tasks.web")
         -- require("tasks.devops")
     end,
