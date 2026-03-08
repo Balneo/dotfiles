@@ -68,6 +68,12 @@ sudo pacman -S --needed --noconfirm \
     python-black \
     yaml-language-server \
     mosquitto \
+    tree-sitter-cli \
+    zathura \
+    zathura-pdf-mupdf \
+    texlab \
+    texlive \
+    glow \
     ripgrep
 
 # npm stuff for neovim

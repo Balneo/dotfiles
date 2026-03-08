@@ -23,6 +23,7 @@ require("mason-tool-installer").setup({
         "marksman",
         "markdownlint",
         "yaml-language-server",
+        "texlab",
     },
 })
 
@@ -43,6 +44,7 @@ local servers = {
     "marksman",
     "emmet_language_server",
     "ts_ls",
+    "texlab",
 }
 
 vim.lsp.config("marksman", {
