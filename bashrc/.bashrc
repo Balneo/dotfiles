@@ -29,6 +29,8 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\]\u@\h \W \[\033[01;37m\]\$ \[
 alias ll='ls -l --color=auto'
 alias la='ls -lAh'
 alias vim='nvim'
+alias gs='git status'
+
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
@@ -37,5 +39,5 @@ export SUDO_EDITOR="nvim"
 eval "$(starship init bash)"
 source <(fzf --bash)
 
-
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH=$HOME/.local/bin:$PATH
