@@ -29,8 +29,16 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\]\u@\h \W \[\033[01;37m\]\$ \[
 alias ll='ls -l --color=auto'
 alias la='ls -lAh'
 alias vim='nvim'
-alias gs='git status'
+alias nv='NVIM_APPNAME=nvim-next nvim'
+# alias gs='git status'
 
+# alias pdfcompress='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile='
+
+pdfcompress() {
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+       -dNOPAUSE -dQUIET -dBATCH \
+       -sOutputFile="$2" "$1"
+}
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
@@ -39,5 +47,7 @@ export SUDO_EDITOR="nvim"
 eval "$(starship init bash)"
 source <(fzf --bash)
 
+export TMUXP_CONFIGDIR="$HOME/.config/tmux/sessions"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH=$HOME/.local/bin:$PATH
+export PATH="$PATH:/usr/lib/qt6/bin"

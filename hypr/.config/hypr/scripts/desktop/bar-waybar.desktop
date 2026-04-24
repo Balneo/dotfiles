@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Bar: Waybar
+Exec=/home/ff/.config/hypr/scripts/toggle_bar.sh waybar
+Icon=view-list-details
+Terminal=false
+Categories=Utility;
+Keywords=bar;status;waybar;

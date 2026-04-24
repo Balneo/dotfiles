@@ -1,0 +1,4 @@
+module config.themes
+singleton Tokyo 1.0 Tokyo.qml
+singleton Gruvbox 1.0 Gruvbox.qml
+singleton Catppuccin 1.0 Catppuccin.qml

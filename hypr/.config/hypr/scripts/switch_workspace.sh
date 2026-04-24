@@ -3,7 +3,7 @@ operation="$1"
 workspace="$2"
 
 monitor_id=$(hyprctl activeworkspace -j | jq -r ".monitorID")
-workspace_id=$(( monitor_id * 10 + workspace ))
+workspace_id=$((monitor_id * 10 + workspace))
 
 case "$operation" in
     switch)

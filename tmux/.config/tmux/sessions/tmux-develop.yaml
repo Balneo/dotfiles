@@ -1,0 +1,10 @@
+session_name: tmux-develop
+windows:
+- focus: 'true'
+  layout: 3023,110x66,0,0[110x33,0,0,0,110x32,0,34,3]
+  options: {}
+  panes:
+  - nvim
+  - pane
+  start_directory: /home/ff/.config/tmux
+  window_name: bash

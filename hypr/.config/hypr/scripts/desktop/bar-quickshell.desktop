@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Bar: Quickshell
+Exec=/home/ff/.config/hypr/scripts/toggle_bar.sh quickshell
+Icon=view-list-details
+Terminal=false
+Categories=Utility;
+Keywords=bar;status;quickshell;qs;shell;
